@@ -5,13 +5,16 @@ import time
 import logging
 import re
 
+# username & password 
 USERNAME = "support"
-PASSWORD = "Sab18Jaro19++"
+PASSWORD = "password"
 
+# AP IP range 
 IP_START = 130
 IP_END = 140
 IP_BASE = "192.168.0."
 
+# Logging 
 logging.basicConfig(
     filename="AP-Status.txt",
     level=logging.INFO,
@@ -19,6 +22,7 @@ logging.basicConfig(
     filemode="w"
 )
 
+# ssh session 
 def check_port_speed(host):
     try:
         client = paramiko.SSHClient()
